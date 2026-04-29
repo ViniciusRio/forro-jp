@@ -9,8 +9,10 @@
 <body>
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   <script>
-  if (window.location.hash && window.location.hash.includes('invite_token')) {
-    window.location.href = '/admin/#' + window.location.hash.slice(1);
+  var params = new URLSearchParams(window.location.search);
+  var hash = window.location.hash;
+  if (params.get('invite_token') || params.get('confirmation_token') || params.get('recovery_token') || (hash && hash.includes('invite_token'))) {
+    window.location.href = '/admin/' + window.location.search + window.location.hash;
   }
 </script>
 </body>
