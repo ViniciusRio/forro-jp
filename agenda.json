@@ -1,0 +1,163 @@
+{
+  "city": "João Pessoa, PB",
+  "title": "Forró Pé de Serra",
+  "subtitle": "Agenda fixa semanal da cidade",
+  "lastUpdated": "2025-01-01",
+  "days": [
+    {
+      "id": "segunda",
+      "label": "Segunda-feira",
+      "events": [
+        {
+          "name": "Forró do Turista",
+          "venue": "Bessa Grill",
+          "neighborhood": "Bessa",
+          "instagram": "https://www.instagram.com/bessagrilljp",
+          "frequency": null
+        }
+      ]
+    },
+    {
+      "id": "terca",
+      "label": "Terça-feira",
+      "events": []
+    },
+    {
+      "id": "quarta",
+      "label": "Quarta-feira",
+      "events": [
+        {
+          "name": "Gravação Cantos e Contos",
+          "venue": "Bessa Grill",
+          "neighborhood": "Bessa",
+          "instagram": null,
+          "frequency": null
+        },
+        {
+          "name": "Prática Forrozeira Iandê",
+          "venue": "Iandê Cultura",
+          "neighborhood": "Bessa",
+          "instagram": "https://www.instagram.com/iandecultura",
+          "frequency": "1ª quarta do mês"
+        }
+      ]
+    },
+    {
+      "id": "quinta",
+      "label": "Quinta-feira",
+      "events": [
+        {
+          "name": "Recanto das Três Ruas",
+          "venue": "Recanto das Três Ruas",
+          "neighborhood": "Bancários",
+          "instagram": "https://www.instagram.com/recantotresruas",
+          "frequency": null
+        }
+      ]
+    },
+    {
+      "id": "sexta",
+      "label": "Sexta-feira",
+      "events": [
+        {
+          "name": "Bancários Grill",
+          "venue": "Bancários Grill",
+          "neighborhood": "Bancários",
+          "instagram": "https://www.instagram.com/bancariosgrill",
+          "frequency": null
+        },
+        {
+          "name": "Forró d'Os Fulano",
+          "venue": "Vila do Porto",
+          "neighborhood": "Centro Histórico",
+          "instagram": "https://www.instagram.com/vila_do_porto",
+          "frequency": "1ª sexta do mês"
+        }
+      ]
+    },
+    {
+      "id": "sabado",
+      "label": "Sábado",
+      "events": [
+        {
+          "name": "Projeto Forró na Caixa",
+          "venue": "Praça Rio Branco",
+          "neighborhood": "Centro",
+          "instagram": "https://www.instagram.com/forronacaixajp",
+          "frequency": "Sabadinho Bom"
+        },
+        {
+          "name": "Forró de Candeeiro",
+          "venue": "Castelo Branco",
+          "neighborhood": "Castelo Branco",
+          "instagram": "https://www.instagram.com/jefersonleiterabequeiro",
+          "frequency": "1º sábado do mês"
+        },
+        {
+          "name": "Pirâmide Shopping",
+          "venue": "Pirâmide Shopping",
+          "neighborhood": "Tambaú",
+          "instagram": "https://www.instagram.com/piramide_shopping",
+          "frequency": null
+        },
+        {
+          "name": "Beer Garden",
+          "venue": "Beer Garden",
+          "neighborhood": "Miramar",
+          "instagram": "https://www.instagram.com/beergardenjp",
+          "frequency": null
+        },
+        {
+          "name": "Casarão Criativo",
+          "venue": "Casarão Criativo",
+          "neighborhood": "Centro",
+          "instagram": "https://www.instagram.com/casaraocriativo",
+          "frequency": null
+        }
+      ]
+    },
+    {
+      "id": "domingo",
+      "label": "Domingo",
+      "events": [
+        {
+          "name": "Recanto das Três Ruas",
+          "venue": "Recanto das Três Ruas",
+          "neighborhood": "Bancários",
+          "instagram": null,
+          "frequency": null
+        },
+        {
+          "name": "Casarão Criativo",
+          "venue": "Casarão Criativo",
+          "neighborhood": "Centro",
+          "instagram": null,
+          "frequency": "verificar programação"
+        }
+      ]
+    }
+  ],
+  "variableVenues": [
+    {
+      "name": "Arpoador",
+      "neighborhood": "Tambaú",
+      "instagram": null,
+      "days": "Quinta a domingo"
+    },
+    {
+      "name": "Clube Cabo Branco",
+      "neighborhood": "Miramar",
+      "instagram": null,
+      "days": "Sexta a domingo"
+    }
+  ],
+  "otherVenues": [
+    { "name": "Seu Antônio Bar", "neighborhood": "Bessa" },
+    { "name": "Barril 21", "neighborhood": "Bessa" },
+    { "name": "Dorys Prime", "neighborhood": "José Américo" },
+    { "name": "Priscilla's Halls", "neighborhood": "Mandacaru" },
+    { "name": "Beer Time", "neighborhood": "José Américo" },
+    { "name": "Forronejo", "neighborhood": "Altiplano" },
+    { "name": "Mansão Music Bar", "neighborhood": "Geisel" }
+  ]
+}
