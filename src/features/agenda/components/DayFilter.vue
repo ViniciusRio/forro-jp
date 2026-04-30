@@ -20,14 +20,14 @@ function isActive(filter: DayFilter) {
 <template>
   <div class="day-filter">
     <button :class="['filter-btn', { active: isActive('all') }]" @click="handleFilter('all')">
-      All days
+      Todos os dias
     </button>
 
     <button
       :class="['filter-btn', 'today-btn', { active: isActive('today') }]"
       @click="handleFilter('today')"
     >
-      Today
+      Hoje
     </button>
 
     <button
