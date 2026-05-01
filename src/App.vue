@@ -2,6 +2,7 @@
 import { onMounted } from 'vue'
 import { useAgendaStore } from '@/stores/agendaStore'
 import DayFilter from '@/features/agenda/components/DayFilter.vue'
+import AgendaList from '@/features/agenda/components/AgendaList.vue'
 
 const store = useAgendaStore()
 
@@ -11,57 +12,28 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="app">
-    <header class="hero">
-      <p class="hero-tag">João Pessoa · PB</p>
-      <h1 class="hero-title">Vem Dançar <em>JP</em></h1>
-      <p class="hero-sub">Agenda fixa semanal de Pé de Serra</p>
+  <div class="min-h-screen bg-green-50">
+    <header class="bg-white border-b-2 border-green-200 px-6 py-10 relative overflow-hidden">
+      <p class="text-xs font-bold tracking-widest uppercase text-purple-600 mb-1">João Pessoa · PB</p>
+      <h1 class="text-4xl font-bold text-green-900 leading-tight mb-1">
+        Vem Dançar <em class="italic text-green-500">JP</em>
+      </h1>
+      <p class="text-sm text-gray-500">Agenda fixa semanal de Forró Pé de Serra</p>
     </header>
 
-    <div v-if="store.isLoading">Carregando...</div>
-    <div v-else-if="store.error">Erro: {{ store.error }}</div>
-    <div v-else>
-      <DayFilter v-if="store.agenda" :days="store.agenda.days" />
-      <pre>{{ store.filteredDays }}</pre>
+    <div v-if="store.isLoading" class="flex items-center justify-center py-12 text-gray-400 italic text-sm">
+      carregando agenda...
     </div>
+
+    <div v-else-if="store.error" class="flex items-center justify-center py-8 text-red-500 text-sm">
+      Erro ao carregar: {{ store.error }}
+    </div>
+
+    <template v-else-if="store.agenda">
+      <div class="sticky top-0 z-10 bg-white border-b border-green-200 py-2">
+        <DayFilter :days="store.agenda.days" />
+      </div>
+      <AgendaList />
+    </template>
   </div>
 </template>
-
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: 'Nunito', sans-serif;
-  background: #f7fdf4;
-}
-.hero {
-  background: #fff;
-  padding: 2rem 1.5rem;
-  border-bottom: 2px solid #d4edda;
-}
-.hero-tag {
-  font-size: 11px;
-  color: #7c3aed;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 0.4rem;
-}
-.hero-title {
-  font-size: 32px;
-  font-weight: 700;
-  color: #1a4d2e;
-}
-.hero-title em {
-  font-style: italic;
-  color: #16a34a;
-}
-.hero-sub {
-  font-size: 14px;
-  color: #6b7280;
-  margin-top: 0.3rem;
-}
-</style>

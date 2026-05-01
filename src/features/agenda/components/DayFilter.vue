@@ -18,13 +18,26 @@ function isActive(filter: DayFilter) {
 </script>
 
 <template>
-  <div class="day-filter">
-    <button :class="['filter-btn', { active: isActive('all') }]" @click="handleFilter('all')">
+  <div class="flex gap-2 px-6 overflow-x-auto scrollbar-hide">
+    <button
+      :class="[
+        'flex-shrink-0 px-4 py-1.5 rounded-full border-2 text-xs font-bold whitespace-nowrap transition-all',
+        isActive('all')
+          ? 'bg-green-600 border-green-600 text-white'
+          : 'bg-white border-gray-200 text-gray-500 hover:border-green-500 hover:text-green-600'
+      ]"
+      @click="handleFilter('all')"
+    >
       Todos os dias
     </button>
 
     <button
-      :class="['filter-btn', 'today-btn', { active: isActive('today') }]"
+      :class="[
+        'flex-shrink-0 px-4 py-1.5 rounded-full border-2 text-xs font-bold whitespace-nowrap transition-all',
+        isActive('today')
+          ? 'bg-purple-600 border-purple-600 text-white'
+          : 'bg-white border-purple-300 text-purple-600 hover:border-purple-500'
+      ]"
       @click="handleFilter('today')"
     >
       Hoje
@@ -33,60 +46,15 @@ function isActive(filter: DayFilter) {
     <button
       v-for="day in props.days"
       :key="day.id"
-      :class="['filter-btn', { active: isActive(day.id) }]"
+      :class="[
+        'flex-shrink-0 px-4 py-1.5 rounded-full border-2 text-xs font-bold whitespace-nowrap transition-all',
+        isActive(day.id)
+          ? 'bg-green-600 border-green-600 text-white'
+          : 'bg-white border-gray-200 text-gray-500 hover:border-green-500 hover:text-green-600'
+      ]"
       @click="handleFilter(day.id)"
     >
       {{ day.label.split('-')[0] }}
     </button>
   </div>
 </template>
-
-<style scoped>
-.day-filter {
-  display: flex;
-  gap: 6px;
-  padding: 0 1.5rem;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.day-filter::-webkit-scrollbar {
-  display: none;
-}
-
-.filter-btn {
-  flex-shrink: 0;
-  padding: 5px 14px;
-  border-radius: 20px;
-  border: 1.5px solid #e5e7eb;
-  background: #fff;
-  color: #6b7280;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.15s ease;
-}
-
-.filter-btn:hover {
-  border-color: #16a34a;
-  color: #16a34a;
-}
-
-.filter-btn.active {
-  background: #16a34a;
-  border-color: #16a34a;
-  color: #fff;
-}
-
-.filter-btn.today-btn {
-  border-color: #7c3aed;
-  color: #7c3aed;
-}
-
-.filter-btn.today-btn.active {
-  background: #7c3aed;
-  border-color: #7c3aed;
-  color: #fff;
-}
-</style>
