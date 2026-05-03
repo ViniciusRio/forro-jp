@@ -5,7 +5,7 @@
   "lastUpdated": "2025-01-01",
   "days": [
     {
-      "id": "segunda",
+      "id": "monday",
       "label": "Segunda-feira",
       "events": [
         {
@@ -18,12 +18,12 @@
       ]
     },
     {
-      "id": "terca",
+      "id": "tuesday",
       "label": "Terça-feira",
       "events": []
     },
     {
-      "id": "quarta",
+      "id": "wednesday",
       "label": "Quarta-feira",
       "events": [
         {
@@ -43,7 +43,7 @@
       ]
     },
     {
-      "id": "quinta",
+      "id": "thursday",
       "label": "Quinta-feira",
       "events": [
         {
@@ -56,7 +56,7 @@
       ]
     },
     {
-      "id": "sexta",
+      "id": "friday",
       "label": "Sexta-feira",
       "events": [
         {
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "id": "sabado",
+      "id": "saturday",
       "label": "Sábado",
       "events": [
         {
@@ -117,7 +117,7 @@
       ]
     },
     {
-      "id": "domingo",
+      "id": "sunday",
       "label": "Domingo",
       "events": [
         {
