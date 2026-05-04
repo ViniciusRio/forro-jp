@@ -7,7 +7,7 @@ import EventCard from '@/features/agenda/components/EventCard.vue' // ← faltou
 </script>
 
 <template>
-  <main class="agenda-list">
+  <main class="px-6 pb-8 mx-auto">
     <div
       v-for="day in store.filteredDays"
       :key="day.id"
